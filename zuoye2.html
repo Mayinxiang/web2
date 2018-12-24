@@ -147,9 +147,9 @@
 					<div class="f5" style="border: solid 1px white;background: none;" id="ml2">200ml</div>
 					<div style="width: 300px;height: 30px;float: left;margin-left: 25px;margin-top: 20px;">
 						<span style="margin-top: 0px;line-height: 30px">数量</span>
-						<div class="f6" style="margin-left: 65px;cursor: pointer;" id="jia">+</div>
+						<div class="f6" style="margin-left: 65px;cursor:not-allowed;" id="jie">-</div>
 						<div class="f6" style="width: 51px;font-size: 12px" id="number">1</div>
-						<div class="f6" id="jie" style="cursor: not-allowed;">-</div>
+						<div class="f6" id="jia" style="cursor: pointer;">+</div>
 						<span style="margin-top: 0px;line-height: 30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;件&nbsp;（库存5件）</span>
 					</div>
 					<div class="f7">
@@ -313,18 +313,18 @@
 			i++;
 			if(i==5)
 			{
-				jia.setAttribute('style'," margin-left: 65px;cursor: not-allowed;")
+				jia.setAttribute('style'," cursor: not-allowed;")
 			}
 			if(i==1)
 			{
-				jie.setAttribute('style',"cursor: not-allowed;")
+				jie.setAttribute('style'," margin-left: 65px;cursor: not-allowed;")
 			}
 			if(i>1&&i<5)
 			{
 
 				shu.innerHTML=i;
-				jia.setAttribute('style'," margin-left: 65px;cursor: pointer;");
-				jie.setAttribute('style',"cursor: pointer;")
+				jia.setAttribute('style',"cursor: pointer;");
+				jie.setAttribute('style'," margin-left: 65px;cursor: pointer;")
 			}
 			else{
 				shu.innerHTML=5;
@@ -334,16 +334,16 @@
 		jie.onclick=function(){
 			i--;
 			if(i==1){
-				jie.setAttribute('style',"cursor: not-allowed;")
+				jie.setAttribute('style',"margin-left: 65px;cursor: not-allowed;")
 			}
 			if(i==5)
 			{
-				jia.setAttribute('style'," margin-left: 65px;cursor: not-allowed;")
+				jia.setAttribute('style'," cursor: not-allowed;")
 			}
 			if(i>1&&i<6)
 			{
-				jia.setAttribute('style'," margin-left: 65px;cursor: pointer;");
-				jie.setAttribute('style',"cursor: pointer;")
+				jia.setAttribute('style',"cursor: pointer;");
+				jie.setAttribute('style'," margin-left: 65px;cursor: pointer;")
 				shu.innerHTML=i;
 			}
 			else{
